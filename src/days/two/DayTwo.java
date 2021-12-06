@@ -34,6 +34,6 @@ public class DayTwo {
         }
 
         int result = sub.getDepth() * sub.getHorizontalPosition();
-        Util.processResult(Integer.toString(result), DAY, 1);
+        Util.processResult(Integer.toString(result), DAY, 2);
     }
 }
