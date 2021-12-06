@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DayTwo {
-    private static final String INPUT_FILE = "data/2/input.txt";
-    private static final String DAY = "Two";
+    private static final int DAY = 2;
+    private static final String INPUT_FILE = "data/" + DAY + "/input.txt";
 
     public static void main(String[] args) {
         List<String> input = Util.getFileAsList(INPUT_FILE);

@@ -23,7 +23,7 @@ public class Util {
     }
   }
 
-  public static void processResult(String buffer, String day, Integer part) {
+  public static void processResult(String buffer, int day, Integer part) {
     displayResult(buffer, part);
     writeResult(buffer, day, part);
   }
@@ -39,7 +39,7 @@ public class Util {
     System.out.println("Part " + part.toString() + ": " + buffer);
   }
 
-  private static void writeResult(String buffer, String day, Integer part) {
+  private static void writeResult(String buffer, int day, Integer part) {
     // Where Main is running
     StringBuilder builder = new StringBuilder();
     builder.append("results/day");

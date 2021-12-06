@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class DayOne {
-    private static final String INPUT_FILE = "data/1/input.txt";
-    private static final String DAY = "One";
+    private static final int DAY = 1;
+    private static final String INPUT_FILE = "data/" + DAY + "/input.txt";
 
     public static void main(String[] args) {
         List<String> input = Util.getFileAsList(INPUT_FILE);
@@ -27,7 +27,7 @@ public class DayOne {
             prevReading = currentReading;
         }
 
-        Util.processResult(Integer.toString(increased), DAY, 1);
+        Util.processResult(Integer.toString(increased), DAY,1);
     }
 
     private static void partTwo(List<Integer> depths) {
@@ -45,6 +45,6 @@ public class DayOne {
             prevSum = currentSum;
         }
 
-        Util.processResult(Integer.toString(increased), DAY, 2);
+        Util.processResult(Integer.toString(increased), DAY,2);
     }
 }
