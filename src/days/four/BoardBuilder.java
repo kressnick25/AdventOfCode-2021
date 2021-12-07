@@ -21,7 +21,7 @@ public class BoardBuilder {
                        .collect(Collectors.toList()));
   }
 
-  public BingoBoard build() {
+  public BingoBoard build(int id) {
     return new BingoBoard(this.board);
   }
 }

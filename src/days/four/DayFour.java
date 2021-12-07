@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 import java.util.stream.Collectors;
 
 public class DayFour {
@@ -32,27 +33,28 @@ public class DayFour {
       for (int j = i; j < i + numRows; j++) {
         builder.appendRow(input.get(j));
       }
-      boards.add(builder.build());
+      boards.add(builder.build(i));
     }
 
     int winningResult = 0;
     int sumUnmarked = 0;
+    Stack<BingoBoard> winningBoards = new Stack();
     for (Integer result : results) {
       for (BingoBoard board : boards) {
-        board.markResult(result);
-        if (board.hasWon()) {
-          sumUnmarked = board.getSumUnmarked();
-          winningResult = result;
-          break;
+        if (board.getWinningResult() == null) {
+          board.markResult(result);
         }
-
+        if (board.hasWon() && board.getWinningResult() == null) {
+          board.setWinningResult(result);
+          winningBoards.push(board);
+        }
       }
-      if (winningResult != 0 && sumUnmarked != 0) break;
     }
 
-    int result = winningResult * sumUnmarked;
+    BingoBoard lastBoard = winningBoards.pop();
+    int result = lastBoard.getSumUnmarked() * lastBoard.getWinningResult();
 
-    Util.processResult(Integer.toString(result), DAY, 1);
+    Util.processResult(Integer.toString(result), DAY, 2);
   }
 
 }

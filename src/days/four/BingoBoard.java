@@ -4,9 +4,19 @@ import java.util.List;
 
 public class BingoBoard {
   private List<List<Integer>> board;
+  private Integer winningResult;
 
   public BingoBoard(List<List<Integer>> board) {
     this.board = board;
+    this.winningResult = null;
+  }
+
+  public Integer getWinningResult() {
+    return this.winningResult;
+  }
+
+  public void setWinningResult(Integer result) {
+    this.winningResult = result;
   }
 
   public int getSumUnmarked() {
