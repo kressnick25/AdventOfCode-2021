@@ -13,11 +13,7 @@ public class DayFive {
     List<String> input = Util.getFileAsList(Util.getInputFile(DAY));
 
     List<Line> lines = parseLines(input);
-
-    // Filter lines
-    lines = lines.stream()
-                 .filter(DayFive::onlyHorizontalOrVertical)
-                 .collect(Collectors.toList());
+    assert(lines.size() > 0);
 
     int maxX = Math.max(lines.stream().map(e -> e.getStart().getX()).max(Integer::compareTo).get(),
                         lines.stream().map(e -> e.getEnd().getX()).max(Integer::compareTo).get());

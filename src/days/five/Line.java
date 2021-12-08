@@ -32,6 +32,19 @@ public class Line {
         grid[start.getY()][i]++;
       }
     }
+    else {
+      int directionX = Integer.signum(end.getX() - start.getX());
+      int directionY = Integer.signum(end.getY() - start.getY());
+      int y = start.getY();
+      int x = start.getX();
+      for(int i = 0; i <= Math.abs(end.getX() - start.getX()); i++) {
+        grid[y][x]++;
+        y += directionY;
+        x += directionX;
+      }
+
+
+    }
 
   }
 
