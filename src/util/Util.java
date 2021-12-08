@@ -13,6 +13,10 @@ public class Util {
    */
   public static final String WHITESPACE_REGEX = "\\s+";
 
+  public static String getInputFile(int day) {
+    return "data/" + day + "/input.txt";
+  }
+
   public static List<String> getFileAsList(String filename) {
     try {
       Path path = Paths.get(filename);
