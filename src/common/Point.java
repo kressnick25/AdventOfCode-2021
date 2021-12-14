@@ -1,4 +1,4 @@
-package days.five;
+package common;
 
 public class Point {
   private final int x;

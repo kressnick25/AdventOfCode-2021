@@ -1,10 +1,10 @@
 package days.five;
 
+import common.Point;
 import util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class DayFive {
   private static final int DAY = 5;

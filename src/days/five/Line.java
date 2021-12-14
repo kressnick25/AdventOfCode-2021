@@ -1,5 +1,7 @@
 package days.five;
 
+import common.Point;
+
 public class Line {
   private final Point start;
   private final Point end;
